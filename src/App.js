@@ -42,7 +42,7 @@ const Modal = ({ product }) => {
   return (
     <div className="modal fade" id={`productModal${product.id}`} aria-labelledby={`productModalLabel${product.id}`} aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered">
-        <div className="modal-content">
+        <div className="modal-content rounded-6">
           <div className='modal-header d-flex justify-content-center'>
             <h5 className='m-0 p-0 fs-6 fw-bold'>{product.title}</h5>
             <button type="button" className="btn-close text-dark" aria-label="Close" data-bs-dismiss="modal"></button>

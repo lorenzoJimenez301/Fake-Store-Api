@@ -9,8 +9,10 @@ export const Aside = () => {
       const updatedTag = tag.map(item =>
         item.id === id ? { ...item, cont: item.cont - 1 } : item
       ).filter(item => item.cont > 0);
-    
-      setPrice(price - newPrice);
+
+      const isPrice = Math.max(price - newPrice, 0);
+      const newNumber = parseFloat(isPrice.toFixed(2));
+      setPrice(newNumber)
       setTag(updatedTag);
     };
 
